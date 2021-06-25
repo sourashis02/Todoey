@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todoey/service/task_data.dart';
 
+String mtask = '';
+
 class AddTasks extends StatelessWidget {
-  final String mtask;
   @override
   Widget build(BuildContext context) {
     return Container(
