@@ -10,13 +10,15 @@ class TaskItem extends StatelessWidget {
       builder: (context, taskbuild, child) {
         return ListView.builder(
           itemBuilder: (context, index) {
+            final tasktool = taskbuild.tasks[index];
             return TasksTile(
-              isChecked: taskbuild.tasks[index].isChecked,
-              taskTitle: taskbuild.tasks[index].tasktitle,
+              isChecked: tasktool.isChecked,
+              taskTitle: tasktool.tasktitle,
               onChanged: (value) {
-                // setState(() {
-                //   widget.tasks[index].toggleCheckBox();
-                // });
+                taskbuild.checkboxtrue(tasktool);
+              },
+              onlngPress: () {
+                taskbuild.deletetask(index);
               },
             );
           },

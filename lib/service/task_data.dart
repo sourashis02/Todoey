@@ -12,4 +12,14 @@ class TaskListData extends ChangeNotifier {
     tasks.add(task);
     notifyListeners();
   }
+
+  void checkboxtrue(Tasks task) {
+    task.toggleCheckBox();
+    notifyListeners();
+  }
+
+  void deletetask(int indexat) {
+    tasks.removeAt(indexat);
+    notifyListeners();
+  }
 }
